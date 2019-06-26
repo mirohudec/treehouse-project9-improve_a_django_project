@@ -14,13 +14,6 @@ def menu_list(request):
     # original time 266 queries in 40 - 60ms
     past = now() - timedelta(days=365 * 6)
 
-    # all_menus = Menu.objects.all()
-    # menus = []
-    # for menu in all_menus:
-    #     if menu.expiration_date:
-    #         if menu.expiration_date >= past:
-    #             menus.append(menu)
-
     # new time 2 queries in 5-7ms
     menus = Menu.objects.filter(
         Q(expiration_date__gte=past) |
