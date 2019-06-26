@@ -10,7 +10,7 @@ pep8 = "*"
 autopep8 = "*"
 
 [packages]
-django = "==2.2"
+django = "==2.2.2"
 coverage = "*"
 django-debug-toolbar = "*"
 selenium = "==2.53.1"
